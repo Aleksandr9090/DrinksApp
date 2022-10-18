@@ -9,12 +9,14 @@ import UIKit
 
 class DrinksViewController: UITableViewController {
     
+    
+    
     private var drinks: [Drink] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 100
+        tableView.rowHeight = 80
         fetchDrinks()
     }
 
@@ -23,20 +25,14 @@ class DrinksViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         drinks.count
     }
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-        var content = cell.defaultContentConfiguration()
-        NetworkManager.shared.fetchImage(from: "https://images.dog.ceo/breeds/boxer/n02108089_485.jpg") { imageData in
-            content.image = UIImage(data: imageData)
-            self.tableView.reloadData()
-        }
-        content.text = drinks[indexPath.row].strDrink
-        content.imageProperties.cornerRadius = tableView.rowHeight / 2
-        cell.contentConfiguration = content
-        
-
+        let drink = drinks[indexPath.row]
+        cell.configure(with: drink)
+    
         return cell
     }
     
