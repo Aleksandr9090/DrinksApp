@@ -14,6 +14,8 @@
 		1F72F82528FE9FB900CECF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F72F82428FE9FB900CECF09 /* Assets.xcassets */; };
 		1F72F82828FE9FB900CECF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F72F82628FE9FB900CECF09 /* LaunchScreen.storyboard */; };
 		1F72F83028FEA1E100CECF09 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F82F28FEA1E100CECF09 /* DrinksViewController.swift */; };
+		1F72F83228FEA8BD00CECF09 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F83128FEA8BD00CECF09 /* Drink.swift */; };
+		1F72F83428FEFF7B00CECF09 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F83328FEFF7A00CECF09 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1F72F82728FE9FB900CECF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F72F82928FE9FB900CECF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F72F82F28FEA1E100CECF09 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
+		1F72F83128FEA8BD00CECF09 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		1F72F83328FEFF7A00CECF09 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,12 @@
 				1F72F81D28FE9FB400CECF09 /* SceneDelegate.swift */,
 				1F72F82F28FEA1E100CECF09 /* DrinksViewController.swift */,
 				1F72F81F28FE9FB400CECF09 /* DetailViewController.swift */,
+				1F72F83128FEA8BD00CECF09 /* Drink.swift */,
 				1F72F82128FE9FB400CECF09 /* Main.storyboard */,
 				1F72F82428FE9FB900CECF09 /* Assets.xcassets */,
 				1F72F82628FE9FB900CECF09 /* LaunchScreen.storyboard */,
 				1F72F82928FE9FB900CECF09 /* Info.plist */,
+				1F72F83328FEFF7A00CECF09 /* NetworkManager.swift */,
 			);
 			path = DrinksApp;
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F72F83428FEFF7B00CECF09 /* NetworkManager.swift in Sources */,
 				1F72F82028FE9FB400CECF09 /* DetailViewController.swift in Sources */,
 				1F72F81C28FE9FB400CECF09 /* AppDelegate.swift in Sources */,
 				1F72F81E28FE9FB400CECF09 /* SceneDelegate.swift in Sources */,
+				1F72F83228FEA8BD00CECF09 /* Drink.swift in Sources */,
 				1F72F83028FEA1E100CECF09 /* DrinksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

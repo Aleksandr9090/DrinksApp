@@ -41,6 +41,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YbR-Wz-qEA"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lz4-iF-xYb" id="vjI-ft-Xaz"/>
+                        <outlet property="drinkImageView" destination="8RA-gK-yMM" id="MGV-Qs-F5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

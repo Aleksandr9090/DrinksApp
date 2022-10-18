@@ -8,12 +8,20 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var drink: Drink!
 
+    @IBOutlet var drinkImageView: UIImageView!
+    @IBOutlet var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NetworkManager.shared.fetchImage(from: drink.strDrinkThumb) { imageData in
+            self.drinkImageView.image = UIImage(data: imageData)
+        }
+        descriptionLabel.text = drink.strInstructions
     }
-
 
 }
 
