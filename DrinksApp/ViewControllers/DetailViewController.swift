@@ -8,19 +8,20 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
-    var drink: Drink!
-    private var spinnerView = UIActivityIndicatorView()
 
     @IBOutlet var drinkImageView: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    var drink: Drink!
+    
+    private var spinnerView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = drink.strDrink
         showSpinner(in: view)
-        descriptionLabel.text = drink.strInstructions
+        descriptionTextView.text = drink.description
         
         NetworkManager.shared.fetchImage(from: drink.strDrinkThumb) { imageData in
             self.drinkImageView.image = UIImage(data: imageData)

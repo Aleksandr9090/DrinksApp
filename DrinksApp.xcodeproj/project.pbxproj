@@ -66,19 +66,75 @@
 		1F72F81A28FE9FB400CECF09 /* DrinksApp */ = {
 			isa = PBXGroup;
 			children = (
-				1F72F81B28FE9FB400CECF09 /* AppDelegate.swift */,
-				1F72F81D28FE9FB400CECF09 /* SceneDelegate.swift */,
-				1F72F82F28FEA1E100CECF09 /* DrinksViewController.swift */,
-				1F72F81F28FE9FB400CECF09 /* DetailViewController.swift */,
-				1F72F83128FEA8BD00CECF09 /* Drink.swift */,
-				1F72F82128FE9FB400CECF09 /* Main.storyboard */,
-				1F72F82428FE9FB900CECF09 /* Assets.xcassets */,
-				1F72F82628FE9FB900CECF09 /* LaunchScreen.storyboard */,
-				1F72F82928FE9FB900CECF09 /* Info.plist */,
-				1F72F83328FEFF7A00CECF09 /* NetworkManager.swift */,
-				1F72F83528FF08C000CECF09 /* TableViewCell.swift */,
+				1F72F83A2901591A00CECF09 /* Models */,
+				1F72F83E290159AC00CECF09 /* ViewControllers */,
+				1F72F83F290159CE00CECF09 /* Views */,
+				1F72F83D2901597F00CECF09 /* Storyboards */,
+				1F72F840290159EC00CECF09 /* Services */,
+				1F72F83C2901595E00CECF09 /* App */,
+				1F72F83B2901593300CECF09 /* Sourse */,
 			);
 			path = DrinksApp;
+			sourceTree = "<group>";
+		};
+		1F72F83A2901591A00CECF09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F83128FEA8BD00CECF09 /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F72F83B2901593300CECF09 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F82428FE9FB900CECF09 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		1F72F83C2901595E00CECF09 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F81B28FE9FB400CECF09 /* AppDelegate.swift */,
+				1F72F81D28FE9FB400CECF09 /* SceneDelegate.swift */,
+				1F72F82928FE9FB900CECF09 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1F72F83D2901597F00CECF09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F82128FE9FB400CECF09 /* Main.storyboard */,
+				1F72F82628FE9FB900CECF09 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1F72F83E290159AC00CECF09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F81F28FE9FB400CECF09 /* DetailViewController.swift */,
+				1F72F82F28FEA1E100CECF09 /* DrinksViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1F72F83F290159CE00CECF09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F83528FF08C000CECF09 /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F72F840290159EC00CECF09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F72F83328FEFF7A00CECF09 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T3C77J6JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DrinksApp/Info.plist;
+				INFOPLIST_FILE = DrinksApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -344,7 +400,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T3C77J6JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DrinksApp/Info.plist;
+				INFOPLIST_FILE = DrinksApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

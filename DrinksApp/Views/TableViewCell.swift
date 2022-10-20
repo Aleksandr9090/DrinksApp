@@ -17,6 +17,7 @@ class TableViewCell: UITableViewCell {
             drinkImageView.backgroundColor = .white
         }
     }
+    
     @IBOutlet var nameLabel: UILabel!
 
     func configure(with drink: Drink?) {
@@ -25,8 +26,4 @@ class TableViewCell: UITableViewCell {
             self.drinkImageView.image = UIImage(data: imageData)
         }
     }
-    
-    
-    
-    
 }

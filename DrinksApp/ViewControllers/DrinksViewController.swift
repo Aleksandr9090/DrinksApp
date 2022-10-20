@@ -15,7 +15,6 @@ class DrinksViewController: UITableViewController {
         super.viewDidLoad()
         
         fetchDrinks()
-        //tableView.rowHeight = 80
     }
 
     // MARK: - Table view data source
@@ -40,12 +39,11 @@ class DrinksViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
         detailVC.drink = drinks[indexPath.row]
-        
     }
     
     // MARK: - Networking
     
-    func fetchDrinks() {
+    private func fetchDrinks() {
         NetworkManager.shared.fetch(dataType: AboutDrinks.self, from: Link.drinksURL.rawValue) { result in
             switch result {
             case .success(let aboutDrink):
