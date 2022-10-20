@@ -13,19 +13,11 @@ class TableViewCell: UITableViewCell {
         didSet {
             drinkImageView.contentMode = .scaleAspectFit
             drinkImageView.clipsToBounds = true
-            drinkImageView.layer.cornerRadius = 20
+            drinkImageView.layer.cornerRadius = drinkImageView.frame.height / 2
             drinkImageView.backgroundColor = .white
         }
     }
     @IBOutlet var nameLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 
     func configure(with drink: Drink?) {
         nameLabel.text = drink?.strDrink

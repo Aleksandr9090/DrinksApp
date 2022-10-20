@@ -12,7 +12,6 @@ class DetailViewController: UIViewController {
     var drink: Drink!
     private var spinnerView = UIActivityIndicatorView()
 
-    
     @IBOutlet var drinkImageView: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     

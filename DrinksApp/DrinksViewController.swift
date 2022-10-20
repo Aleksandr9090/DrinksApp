@@ -9,15 +9,13 @@ import UIKit
 
 class DrinksViewController: UITableViewController {
     
-    
-    
     private var drinks: [Drink] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 80
         fetchDrinks()
+        //tableView.rowHeight = 80
     }
 
     // MARK: - Table view data source
@@ -26,7 +24,6 @@ class DrinksViewController: UITableViewController {
         drinks.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
@@ -34,26 +31,6 @@ class DrinksViewController: UITableViewController {
         cell.configure(with: drink)
     
         return cell
-    }
-    
-     private func fetchDrinks() {
-        guard let url = URL(string: Link.drinksURL.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            do {
-                let aboutDrinks = try JSONDecoder().decode(AboutDrinks.self, from: data)
-                self.drinks = aboutDrinks.drinks
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch let error {
-                print(error)
-            }
-        }.resume()
     }
     
     // MARK: - Navigation
@@ -66,5 +43,17 @@ class DrinksViewController: UITableViewController {
         
     }
     
-
+    // MARK: - Networking
+    
+    func fetchDrinks() {
+        NetworkManager.shared.fetch(dataType: AboutDrinks.self, from: Link.drinksURL.rawValue) { result in
+            switch result {
+            case .success(let aboutDrink):
+                self.drinks = aboutDrink.drinks
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

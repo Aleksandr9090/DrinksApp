@@ -16,6 +16,7 @@ struct Drink: Decodable {
 
 struct AboutDrinks: Decodable {
     let drinks: [Drink]
+
 }
 
 enum Link: String {
